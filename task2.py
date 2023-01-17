@@ -47,22 +47,19 @@ def fact(a,b):
 print(functools.reduce(fact, list(range(1,x+1))))
 
 
-# inp = [[1,2,3],[4,5,6,7],[8,9]]
+inp = [[1,2,3],[4,5,6,7],[8,9]]
 # out = [1,2,3,4,5,6,7,8,9]
 
 # out = [x for i in inp for x in i]
 # print(out)
 
-# inp = [1,[2,3],[4],[5,6],[7,8,9]]
-# out = [1,2,3,4,5,6,7,8,9]
 
-# out = []
-# def flat(i):
-# 	if type(i) == int:
-# 		out.append(i)
-# 	elif len(i) == 0:
-# 		return i
-# 	else:
-# 		return flat(i[0])+flat(i[1:])
-# flat(inp)
-# print(out)
+out = []
+def flat(i):
+	if not(bool(i)):
+		return i
+	if isinstance(i[0], list):
+		return flat(*i[:1]) + flat(i[1:])
+	return i[:1] + flat(i[1:])
+out = flat(inp)
+print(out)
