@@ -13,21 +13,21 @@ In case of input data being supplied to the question, it should be assumed to be
 
 lines = []
 
-# while True:
-# 	line = input()
-# 	if line:
-# 		lines.append(line.upper())
-# 	else:
-# 		break
-# print("\n".join(lines))
+while True:
+	line = input()
+	if line:
+		lines.append(line.upper())
+	else:
+		break
+print("\n".join(lines))
 
-# while True:
-# 	line = input()
-# 	if line:
-# 		lines.append(line.capitalize())
-# 	else:
-# 		break
-# print("\n".join(lines))
+while True:
+	line = input()
+	if line:
+		lines.append(line.capitalize())
+	else:
+		break
+print("\n".join(lines))
 
 while True:
 	line = input()
