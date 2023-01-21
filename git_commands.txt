@@ -5,9 +5,9 @@ git clone https://github.com/vardhan-duvvuri/goodluck.git
 git checkout -b test_branch
 git branch test_branch
 git add (. for all files) task4.py task5.py
-git commit -m ""
-git push
+git commit -m "commit message"
+git push origin branch_name (master/branch)
 git pull
-git merge
-git squash
-git pop
+git merge branch_name master
+git squash Remove the uncommitted changes
+git pop Get back the last removed changes
