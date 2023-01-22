@@ -8,14 +8,25 @@ In case of input data being supplied to the question, it should be assumed to be
 '''
 
 out = []
-for num in range(1000,3001):
+# for num in range(1000,3001):
+#     temp = True
+#     for digit in str(num):
+#         if not int(digit) % 2 == 0:
+#             temp = False
+#             break
+#     if temp:
+#         out.append(num)
+
+def div(num):
     temp = True
     for digit in str(num):
         if not int(digit) % 2 == 0:
             temp = False
             break
     if temp:
-        out.append(num)
+        return True
+
+out = filter(div, list(range(1000,3001)))
 
 print(",".join([str(x) for x in out]))
 

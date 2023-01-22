@@ -11,14 +11,16 @@ In case of input data being supplied to the question, it should be assumed to be
 '''
 
 sentence = input("Enter Sentence : ")
-digits = 0
-chars = 0
-for char in sentence:
-    if char.isdigit():
-        digits += 1
-    elif char.isalpha():
-        chars += 1
-
+# digits = 0
+# chars = 0
+# for char in sentence:
+#     if char.isdigit():
+#         digits += 1
+#     elif char.isalpha():
+#         chars += 1
+import re
+chars = len("".join(re.findall("[a-zA-Z]+", sentence)))
+digits = len("".join(re.findall("\d+", sentence)))
 print("LETTERS : {}".format(chars))
 print("DIGITS : {}".format(digits))
 
@@ -27,3 +29,4 @@ print("DIGITS : {}".format(digits))
 # a-z to get digits
 # 0-9 to get numbers
 # [\w\d]+
+
