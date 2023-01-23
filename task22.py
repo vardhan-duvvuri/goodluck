@@ -22,13 +22,21 @@ In case of input data being supplied to the question, it should be assumed to be
 
 inp = input('enter the sentance:').split(' ')
 
-dic = {}
+# dic = {}
 
-for word in inp:
-	if word not in dic:
-		dic[word] = 1
-	else:
-		dic[word] += 1
+# for word in inp:
+	#### METHOD 1
+	# if word not in dic:
+	# 	dic[word] = 1
+	# else:
+	# 	dic[word] += 1
+	#### METHOD 2
+	# val = dic.get(word, 0)
+	# dic[word] = val+1
+
+from collections import Counter
+
+dic = Counter(inp)
 
 for key,value in dic.items():
 	print(key, ':', value)
