@@ -20,25 +20,33 @@ In case of input data being supplied to the question, it should be assumed to be
 import re
 out=[]
 x=input().split(",")
-for i in x:
-    if (len(i) < 6 or len(i) > 12):
-        continue
-    elif re.search(r"\s",i):
-        continue
-    elif not re.search(r"[a-z]",i):
-        continue
-    elif not re.search(r"[A-Z]",i):
-        continue
-    elif not re.search(r"[0-9]",i):
-        continue
-    elif not re.search(r"[$#@]",i):
-        continue
-    out.append(i)
-print(",".join(out))
+# for i in x:
+#     if (len(i) < 6 or len(i) > 12):
+#         continue
+#     elif re.search(r"\s",i):
+#         continue
+#     elif not re.search(r"[a-z]",i):
+#         continue
+#     elif not re.search(r"[A-Z]",i):
+#         continue
+#     elif not re.search(r"[0-9]",i):
+#         continue
+#     elif not re.search(r"[$#@]",i):
+#         continue
+#     out.append(i)
+# print(",".join(out))
 
 #Email validation
+# import re
+# regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+# for i in x:
+#     if(re.fullmatch(regex, i)):
+#         out.append(i)
+# print(",".join(out))
+
+# Password Validation
 import re
-regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+regex = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,12}$'
 for i in x:
     if(re.fullmatch(regex, i)):
         out.append(i)
