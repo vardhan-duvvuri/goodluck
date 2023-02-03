@@ -9,5 +9,5 @@ git commit -m "commit message"
 git push origin branch_name (master/branch)
 git pull
 git merge branch_name master
-git squash Remove the uncommitted changes
+git stash Remove the uncommitted changes
 git pop Get back the last removed changes
